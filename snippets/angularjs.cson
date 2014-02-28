@@ -83,6 +83,15 @@
   'module':
     'prefix': 'mod'
     'body': '/**\n * $1 Module\n *\n * ${2:Description}\n */\nangular.module(\'$1\', [$3]).$0'
+  'module.controller':
+    'prefix': 'modcon'
+    'body': 'angular.module(\'${1:name}\').controller(\'${2:ControllerName}\', [\'$scope\', $3function(\$scope$4$3) {\n\t$5\n}]);'
+  '$scope.method':
+    'prefix': 'scope'
+    'body': '$scope.${1:method} = function($2) {\n\t$3\n};'
+  'State Provider .state':
+    'prefix': 'state'
+    'body': '.state(\'${1:state}\', {\n\t\n})$0'
   'noop':
     'prefix': 'noop'
     'body': 'angular.noop'
@@ -93,6 +102,9 @@
   '$routeProvider.when':
     'prefix': 'route'
     'body': '\\$routeProvider.when(\'$1\', {template: \'$2\', controller: $3});'
+  'use strict':
+    'prefix': 'us'
+    'body': '\'use strict;\''
 '.text.html':
   '|currency':
     'prefix': '|'
